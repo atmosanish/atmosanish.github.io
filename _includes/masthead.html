@@ -1,0 +1,14 @@
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="site-name" href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>{{ site.author.name }}</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in site.data.navigation %}
+        {%- if item.needs %}{% assign needed = site.data[item.needs] %}{% if needed == nil or needed.size == 0 %}{% continue %}{% endif %}{% endif %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="colorbar" aria-hidden="true"></div>
+</header>

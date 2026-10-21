@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# Site settings for atmosanish.github.io
+# GitHub Pages builds this site with Jekyll automatically on every push.
+# Most day-to-day edits happen in the _data/ folder (news, publications, talks).
+# ---------------------------------------------------------------------------
+
+title: Anish Kumar
+description: >-
+  Atmospheric scientist working on Arctic stratospheric polar vortex dynamics,
+  ozone loss, severe convective weather, numerical modelling and explainable
+  machine learning.
+url: "https://atmosanish.github.io"   # change if you move to a custom domain
+baseurl: ""
+lang: en
+
+# --- Profile shown in the left sidebar on every page -----------------------
+author:
+  name: Anish Kumar
+  role: Atmospheric scientist, PhD in Meteorology
+  # Current position. "(from November 2026)" stays true after you start;
+  # delete it whenever you like.
+  position: Postdoctoral Fellow, Department of Meteorology (MISU)
+  institution: Stockholm University
+  position_note: from November 2026
+  # Switch to "Stockholm, Sweden" once you have moved.
+  location: Leipzig, Germany
+  photo: /images/profile.jpg
+  email: atmos.anish@gmail.com
+  scholar: https://scholar.google.com/citations?user=NibOQC8AAAAJ&hl=en
+  orcid: https://orcid.org/0009-0002-2279-4932
+  github: https://github.com/atmosanish
+  linkedin: https://www.linkedin.com/in/anish-kumar-786056209
+  researchgate: ""   # paste your ResearchGate profile URL to show the link
+
+# CV PDF already in the repository root. Upload a version WITHOUT a phone number.
+cv_pdf: /Anish_Kumar_CV.pdf
+
+# Journals you review for, shown as one line on the CV page.
+# Leave empty to hide the line. Example:
+# reviewer_for:
+#   - Journal of Atmospheric and Solar-Terrestrial Physics
+#   - Weather and Climate Dynamics
+reviewer_for: []
+
+# --- Build settings (GitHub Pages compatible; no plugins needed) -----------
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+permalink: pretty
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .jekyll-cache
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page

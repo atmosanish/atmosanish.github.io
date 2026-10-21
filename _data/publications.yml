@@ -1,0 +1,153 @@
+# Publications, from the CV (October 2026): PhD thesis + 14 peer-reviewed papers.
+#
+# Fields
+#   id        short unique name, used to cite the paper on the Research page
+#   group     thesis | first | coauthor   (decides the section on the Publications page)
+#   selected  true  -> also shown on the home page (keep it to 3-4 papers)
+#   authors   your name "Kumar, A." is set in bold automatically
+#   details   volume(issue), pages or article number
+#
+# Add new papers at the top of their group (newest first).
+
+- id: kumar2026thesis
+  group: thesis
+  authors: "Kumar, A."
+  year: 2026
+  title: "Advances in Understanding of Exceptionally Strong Arctic Stratospheric Polar Vortex Dynamics and Associated Ozone Loss"
+  venue: "PhD thesis, Leipzig University"
+  url: "https://nbn-resolving.org/urn:nbn:de:bsz:15-qucosa2-1042663"
+  link_label: "Full text"
+
+# --- First author -----------------------------------------------------------
+
+- id: kumar2025climdyn
+  group: first
+  selected: true
+  authors: "Kumar, A., Karami, K., Jacobi, C."
+  year: 2025
+  title: "A 45-Year Climatological Study of Arctic Stratospheric Polar Vortex Dynamics and Morphology using ERA5 Data (1979–2023)"
+  venue: "Climate Dynamics"
+  details: "63, 403"
+  doi: "10.1007/s00382-025-07889-0"
+
+- id: kumar2025jastp
+  group: first
+  selected: true
+  authors: "Kumar, A., Karami, K., Jacobi, C., Mehrdad, S."
+  year: 2025
+  title: "Exploring the impact of orographic and non-orographic gravity waves on Arctic stratospheric polar vortex dynamics and springtime ozone loss"
+  venue: "Journal of Atmospheric and Solar-Terrestrial Physics"
+  details: "273, 106538"
+  doi: "10.1016/j.jastp.2025.106538"
+
+- id: kumar2025scirep
+  group: first
+  selected: true
+  authors: "Kumar, A., Mandal, J., Mehrdad, S., Jacobi, C."
+  year: 2025
+  title: "A Novel Approach to Predict the Arctic Stratospheric Ozone from Stratospheric Polar Vortex Dynamics using Explainable Machine Learnings"
+  venue: "Scientific Reports"
+  details: "15, 36473"
+  doi: "10.1038/s41598-025-24379-9"
+
+- id: kumar2024ajg
+  group: first
+  authors: "Kumar, A., Mondal, U., Panda, S. K., Kader, S. S."
+  year: 2024
+  title: "Sensitivity of horizontal grid resolution on the simulation of thunderstorms over Bangladesh using Weather Research Forecasting Model"
+  venue: "Arabian Journal of Geosciences"
+  details: "17(1), 21"
+  doi: "10.1007/s12517-023-11820-4"
+
+- id: kumar2023mese
+  group: first
+  authors: "Kumar, A., Panda, S. K., Mondal, U., Sharma, D., Das, S."
+  year: 2023
+  title: "Assessment of model time step and domain resolution of WRF model to simulate the lightning over Bihar and Rajasthan, India"
+  venue: "Modeling Earth Systems and Environment"
+  details: "9(4), 3959–3984"
+  doi: "10.1007/s40808-023-01724-3"
+
+- id: kumar2022jastp
+  group: first
+  selected: true
+  authors: "Kumar, A., Das, S., Panda, S. K."
+  year: 2022
+  title: "Numerical simulation of a widespread lightning event over north India using an ensemble of WRF modeling configurations"
+  venue: "Journal of Atmospheric and Solar-Terrestrial Physics"
+  details: "241, 105984"
+  doi: "10.1016/j.jastp.2022.105984"
+
+# --- Co-author --------------------------------------------------------------
+
+- id: karami2025ijc
+  group: coauthor
+  authors: "Karami, K., Jacobi, C., Kumar, A."
+  year: 2025
+  title: "The Morphology of the Stratospheric Polar Vortex Under Stratospheric Aerosol Intervention Scenarios"
+  venue: "International Journal of Climatology"
+  details: "45(8), e8838"
+  doi: "10.1002/joc.8838"
+
+- id: vinisha2025nh
+  group: coauthor
+  authors: "Vinisha, Panda, S. K., Kumar, A., Mondal, U., Wasson, G., Sharma, D."
+  year: 2025
+  title: "Improving severe thunderstorm simulations over Bihar and West Bengal, India through assimilation of upper air observations using the 3DVAR of WRF model"
+  venue: "Natural Hazards"
+  details: "121(1), 577–600"
+  doi: "10.1007/s11069-024-06852-2"
+
+- id: mondal2025jess
+  group: coauthor
+  authors: "Mondal, U., Kumar, A., Panda, S. K., Sreelekshmi, S., Banerjee, B. K., Sharma, D., Das, S."
+  year: 2025
+  title: "Unveiling India's lightning patterns through satellite-based climatology and numerical modelling of severe weather events: A review"
+  venue: "Journal of Earth System Science"
+  details: "134(1), 30"
+  doi: "10.1007/s12040-024-02491-0"
+
+- id: bhavyasree2024mese
+  group: coauthor
+  authors: "Bhavyasree, Panda, S. K., Wasson, G., Mondal, U., Kumar, A., Sharma, D."
+  year: 2024
+  title: "Assessing the performance of WRF model in simulating severe hailstorm events over Assam and Bihar, India"
+  venue: "Modeling Earth Systems and Environment"
+  details: "10(5), 6623–6646"
+  doi: "10.1007/s40808-024-02114-z"
+
+- id: mondal2024gd
+  group: coauthor
+  authors: "Mondal, U., Kumar, A., Panda, S. K., Sharma, D., Das, S."
+  year: 2024
+  title: "Comprehensive study of thunderstorm indices threshold favorable for thunderstorms during monsoon season using WRF–ARW model and ERA5 over India"
+  venue: "Geoenvironmental Disasters"
+  details: "11(1), 5"
+  doi: "10.1186/s40677-023-00262-5"
+
+- id: sharma2024afm
+  group: coauthor
+  authors: "Sharma, A., Sharma, D., Panda, S. K., Kumar, A."
+  year: 2024
+  title: "Sensitivity analysis of different parameterization schemes of the WRF model to simulate heavy rainfall events over the Mahi River Basin, India"
+  venue: "Agricultural and Forest Meteorology"
+  details: "346, 109885"
+  doi: "10.1016/j.agrformet.2023.109885"
+
+- id: mondal2023dao
+  group: coauthor
+  authors: "Mondal, U., Panda, S. K., Banerjee, B. K., Kumar, A., Sharma, D."
+  year: 2023
+  title: "Performance evaluation of lightning potential index and flash count using WRF microphysical parameters over Rajasthan and West Bengal, India"
+  venue: "Dynamics of Atmospheres and Oceans"
+  details: "104, 101404"
+  doi: "10.1016/j.dynatmoce.2023.101404"
+
+- id: mondal2023jastp
+  group: coauthor
+  authors: "Mondal, U., Sreelekshmi, S., Panda, S. K., Kumar, A., Das, S., Sharma, D."
+  year: 2023
+  title: "Diurnal variations in lightning over India and three lightning hotspots: A climatological study"
+  venue: "Journal of Atmospheric and Solar-Terrestrial Physics"
+  details: "252, 106149"
+  doi: "10.1016/j.jastp.2023.106149"

@@ -1,0 +1,26 @@
+# Conference presentations and training, newest first (from the CV).
+
+presentations:
+  - event: "AGU 2025"
+    place: "New Orleans, USA"
+    dates: "15–19 December 2025"
+    title: "A Novel Algorithm to Predict the Ozone from Stratospheric Polar Vortex Dynamics using Explainable Machine Learning"
+
+  - event: "AOGS 2024"
+    place: "Pyeongchang, South Korea"
+    dates: "23–28 June 2024"
+    title: "Intensity and Duration of the Arctic Stratospheric Polar Vortex (1979–2023) and Comparison with ICON Model Simulations"
+
+  - event: "JpGU 2022"
+    place: "Chiba City, Japan"
+    dates: "22 May – 3 June 2022"
+    title: "Simulation of a lightning event using an ensemble of WRF modelling system configurations: Performances of Lightning Potential Index and Lightning Flash Count"
+
+training:
+  - event: "ESiWACE3–WarmWorld Summer School on HPC for Climate and Weather"
+    place: "Helsinki, Finland"
+    dates: "27 August – 2 September 2024"
+
+  - event: "National Training Workshop on Fundamentals of Data Assimilation"
+    place: "IITM Pune, India"
+    dates: "9–21 September 2022"

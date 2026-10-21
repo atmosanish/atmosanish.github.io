@@ -1,0 +1,25 @@
+---
+title: Talks
+permalink: /talks/
+description: Conference presentations and training of Anish Kumar.
+---
+<h2 id="presentations">Conference presentations</h2>
+<ul class="event-list">
+  {%- for t in site.data.talks.presentations %}
+  <li class="event">
+    <p class="event-name"><strong>{{ t.event }}</strong>, {{ t.place }}</p>
+    <p class="event-date">{{ t.dates }}</p>
+    <p class="event-title">{{ t.title }}</p>
+  </li>
+  {%- endfor %}
+</ul>
+
+<h2 id="training">Training</h2>
+<ul class="event-list">
+  {%- for t in site.data.talks.training %}
+  <li class="event">
+    <p class="event-name"><strong>{{ t.event }}</strong>, {{ t.place }}</p>
+    <p class="event-date">{{ t.dates }}</p>
+  </li>
+  {%- endfor %}
+</ul>

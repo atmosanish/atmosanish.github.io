@@ -1,0 +1,12 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in site.pages %}
+  {%- if p.sitemap == false or p.url contains ".xml" or p.url contains ".txt" or p.url contains "/assets/" %}{% continue %}{% endif %}
+  {%- if p.needs %}{% assign needed = site.data[p.needs] %}{% if needed == nil or needed.size == 0 %}{% continue %}{% endif %}{% endif %}
+  <url><loc>{{ p.url | absolute_url | xml_escape }}</loc><lastmod>{{ site.time | date_to_xmlschema }}</lastmod></url>
+{%- endfor %}
+</urlset>

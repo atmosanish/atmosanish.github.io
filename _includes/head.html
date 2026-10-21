@@ -1,0 +1,45 @@
+{%- assign a = site.author -%}
+{%- if page.url == "/" -%}
+  {%- assign page_title = site.title | append: " | Atmospheric scientist" -%}
+{%- else -%}
+  {%- assign page_title = page.title | append: " | " | append: site.title -%}
+{%- endif -%}
+{%- assign page_description = page.description | default: site.description | strip_newlines | normalize_whitespace -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description | escape }}">
+<meta name="author" content="{{ a.name }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- if page.needs %}{% assign needed = site.data[page.needs] %}{% if needed == nil or needed.size == 0 %}
+<meta name="robots" content="noindex">
+{%- endif %}{% endif %}
+<meta property="og:type" content="{% if page.url == '/' %}profile{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/images/og-image.jpg' | absolute_url }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preload" href="{{ '/assets/fonts/literata-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ a.name | jsonify }},
+  "jobTitle": "Postdoctoral Fellow",
+  "affiliation": { "@type": "Organization", "name": {{ a.institution | jsonify }} },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Leipzig University" },
+    { "@type": "CollegeOrUniversity", "name": "Central University of Rajasthan" }
+  ],
+  "email": {{ a.email | prepend: "mailto:" | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "image": {{ a.photo | absolute_url | jsonify }},
+  "sameAs": [{{ a.orcid | jsonify }}, {{ a.scholar | jsonify }}, {{ a.github | jsonify }}, {{ a.linkedin | jsonify }}]
+}
+</script>
+{%- endif %}

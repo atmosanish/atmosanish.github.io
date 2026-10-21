@@ -1,0 +1,36 @@
+---
+layout: default
+title: Home
+---
+{%- assign pubs = site.data.publications -%}
+{%- assign paper_count = pubs | where_exp: "p", "p.group != 'thesis'" | size -%}
+<h1 class="visually-hidden">{{ site.author.name }}</h1>
+
+<p class="lead">I study the Arctic stratospheric polar vortex, the ozone loss associated with it, and severe convective weather.</p>
+
+<p>I completed my PhD in Meteorology at Leipzig University in April 2026 (magna cum laude). In November 2026 I join the Department of Meteorology (MISU) at Stockholm University as a postdoctoral fellow in stratospheric dynamics and turbulence.</p>
+
+<p>My work focuses on the variability, morphology and extreme states of the polar vortex, in particular exceptionally strong vortex events, and on the dynamical controls of Arctic ozone. Before my PhD, I worked on WRF modelling of thunderstorms, lightning, hailstorms and heavy rainfall over South Asia. I combine reanalysis (ERA5), climate-model output (CMIP), ICON and WRF simulations, and explainable machine learning. <a href="{{ '/research/' | relative_url }}">More on my research</a>.</p>
+
+<section aria-labelledby="selected">
+  <h2 id="selected">Selected publications</h2>
+  <ul class="pub-list">
+    {%- for p in pubs %}{% if p.selected %}
+    {% include pub.html p=p %}
+    {%- endif %}{% endfor %}
+  </ul>
+  <p class="more"><a href="{{ '/publications/' | relative_url }}">All publications</a> ({{ paper_count }} peer-reviewed papers and a PhD thesis)</p>
+</section>
+
+{%- comment -%} The news block appears once _data/news.yml has at least one item. {%- endcomment -%}
+{%- if site.data.news.size > 0 %}
+<section aria-labelledby="latest-news">
+  <h2 id="latest-news">News</h2>
+  <ul class="news-list">
+    {%- for n in site.data.news limit: 3 %}
+    {% include news-item.html n=n level=3 %}
+    {%- endfor %}
+  </ul>
+  <p class="more"><a href="{{ '/news/' | relative_url }}">All news</a></p>
+</section>
+{%- endif %}

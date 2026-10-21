@@ -1,0 +1,10 @@
+{%- comment -%} One publication as a list item. Usage: {% include pub.html p=paper %} {%- endcomment -%}
+{%- assign p = include.p -%}
+{%- if p.doi -%}{%- assign plink = "https://doi.org/" | append: p.doi -%}{%- else -%}{%- assign plink = p.url -%}{%- endif -%}
+{%- assign me = "Kumar, A." -%}
+{%- assign me_bold = "<strong>Kumar, A.</strong>" -%}
+<li class="pub" id="{{ p.id }}">
+  <p class="pub-title">{% if plink %}<a href="{{ plink }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+  <p class="pub-authors">{{ p.authors | replace: me, me_bold }} ({{ p.year }})</p>
+  <p class="pub-venue">{% if p.group == "thesis" %}{{ p.venue }}{% else %}<em>{{ p.venue }}</em>{% endif %}{% if p.details %} {{ p.details }}{% endif %}{% if p.doi %}. <a class="pub-doi" href="{{ plink }}">doi:{{ p.doi }}</a>{% elsif p.url %}. <a class="pub-doi" href="{{ p.url }}">{{ p.link_label | default: "Link" }}</a>{% endif %}</p>
+</li>

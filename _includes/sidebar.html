@@ -1,0 +1,26 @@
+{%- assign a = site.author -%}
+<aside class="profile" aria-label="Profile">
+  <img class="profile-photo" src="{{ a.photo | relative_url }}" alt="Portrait of {{ a.name }}" width="480" height="480">
+  <div class="profile-id">
+    <p class="profile-name">{{ a.name }}</p>
+    <p class="profile-role">{{ a.role }}</p>
+  </div>
+  <dl class="profile-facts">
+    <div>
+      <dt>Position</dt>
+      <dd>{{ a.position }}, {{ a.institution }}{% if a.position_note != "" and a.position_note %} <span class="profile-note">({{ a.position_note }})</span>{% endif %}</dd>
+    </div>
+    <div>
+      <dt>Based in</dt>
+      <dd>{{ a.location }}</dd>
+    </div>
+  </dl>
+  <ul class="profile-links">
+    <li><a href="mailto:{{ a.email }}">{{ a.email }}</a></li>
+    {%- if a.scholar != "" %}<li><a href="{{ a.scholar | escape }}">Google Scholar</a></li>{% endif %}
+    {%- if a.orcid != "" %}<li><a href="{{ a.orcid }}">ORCID</a></li>{% endif %}
+    {%- if a.researchgate != "" %}<li><a href="{{ a.researchgate }}">ResearchGate</a></li>{% endif %}
+    {%- if a.github != "" %}<li><a href="{{ a.github }}">GitHub</a></li>{% endif %}
+    {%- if a.linkedin != "" %}<li><a href="{{ a.linkedin }}">LinkedIn</a></li>{% endif %}
+  </ul>
+</aside>

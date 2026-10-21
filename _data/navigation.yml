@@ -1,0 +1,19 @@
+# Top navigation, in display order.
+# An item with "needs: <file>" appears only while _data/<file>.yml has entries:
+# News appears with the first news item, Data & Code with the first dataset.
+- title: News
+  url: /news/
+  needs: news
+- title: Research
+  url: /research/
+- title: Publications
+  url: /publications/
+- title: Data & Code
+  url: /data/
+  needs: datasets
+- title: Talks
+  url: /talks/
+- title: Teaching
+  url: /teaching/
+- title: CV
+  url: /cv/

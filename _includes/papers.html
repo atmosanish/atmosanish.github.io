@@ -1,0 +1,20 @@
+{%- comment -%}
+  Short references for the Research page, linking to the full entry on the
+  Publications page. Usage: {% include papers.html ids="kumar2025climdyn,kumar2026thesis" %}
+  Optional: more="and 7 co-authored papers" more_url="/publications/#co-author"
+{%- endcomment -%}
+{%- assign ids = include.ids | split: "," -%}
+<p class="papers"><span class="papers-label">Papers:</span>
+{%- for raw in ids -%}
+  {%- assign id = raw | strip -%}
+  {%- assign p = site.data.publications | where: "id", id | first -%}
+  {%- if p -%}
+    {%- assign surname = p.authors | split: "," | first -%}
+    {%- if p.group == "thesis" %} <a href="{{ '/publications/' | relative_url }}#{{ p.id }}">PhD thesis ({{ p.year }})</a>
+    {%- else %} <a href="{{ '/publications/' | relative_url }}#{{ p.id }}">{{ surname }} et al. ({{ p.year }}), <em>{{ p.venue }}</em></a>
+    {%- endif -%}
+    {%- unless forloop.last %};{% endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if include.more %}; <a href="{{ include.more_url | relative_url }}">{{ include.more }}</a>{% endif -%}
+</p>

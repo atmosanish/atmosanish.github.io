@@ -1,0 +1,61 @@
+---
+title: Research
+permalink: /research/
+description: Research themes of Anish Kumar — Arctic stratospheric polar vortex, gravity waves, Arctic ozone and explainable machine learning, aerosol intervention, severe convective weather, stratospheric turbulence.
+---
+<p class="intro">My research spans stratospheric dynamics and ozone, and severe convective weather. Each theme lists the papers it is based on.</p>
+
+{%- comment -%}
+  To add a figure to a theme, put the image in /images/research/ and paste
+  this inside the theme's <section>, after the first paragraph:
+
+  <figure>
+    <img src="{{ '/images/research/your-figure.png' | relative_url }}" alt="Describe what the figure shows">
+    <figcaption>One-line caption. From Kumar et al. (2025), Climate Dynamics.</figcaption>
+  </figure>
+{%- endcomment %}
+
+<section class="theme" id="polar-vortex">
+  <h2>The Arctic stratospheric polar vortex</h2>
+  <p>I study how the Arctic polar vortex varies from winter to winter: its strength, shape, position and persistence, and in particular exceptionally strong vortex (ESV) events. My PhD thesis at Leipzig University addressed the dynamics of these events and the ozone loss associated with them.</p>
+  <p>Findings from 45 winters of ERA5 reanalysis (1979–2023):</p>
+  <ul>
+    <li>A new vortex metric based on vortex area and the EPV gradient correlates with the zonal-mean zonal wind at 60°N, 10 hPa at about 0.83.</li>
+    <li>The vortex centre shows a poleward displacement trend of about 14.31 km per year.</li>
+    <li>The winters 1996–97, 2010–11 and 2019–20 stand out as exceptionally strong vortex winters.</li>
+  </ul>
+  {% include papers.html ids="kumar2025climdyn,kumar2026thesis" %}
+</section>
+
+<section class="theme" id="gravity-waves">
+  <h2>Gravity waves and the polar vortex</h2>
+  <p>With 30-year time-slice experiments in the ICON model, I tested how orographic and non-orographic gravity-wave forcing shapes the Arctic polar vortex and springtime ozone loss.</p>
+  <ul>
+    <li>Without orographic gravity waves, ESV events become more frequent and last longer.</li>
+    <li>Without non-orographic gravity waves, the vortex is smaller and shorter-lived, and its breakup is more variable.</li>
+  </ul>
+  {% include papers.html ids="kumar2025jastp" %}
+</section>
+
+<section class="theme" id="ozone-ml">
+  <h2>Arctic ozone and explainable machine learning</h2>
+  <p>I developed an explainable machine-learning framework (XGBoost with SHAP) that predicts Arctic stratospheric ozone from polar vortex dynamics and shows which vortex properties drive each prediction. The model reaches R² ≈ 0.80 (r = 0.91, RMSE 16.8 DU).</p>
+  {% include papers.html ids="kumar2025scirep" %}
+</section>
+
+<section class="theme" id="aerosol-intervention">
+  <h2>The polar vortex under stratospheric aerosol intervention</h2>
+  <p>As co-author, I contributed to an analysis of how the morphology and strength of the polar vortex, and the associated ozone, differ between historical and stratospheric aerosol intervention scenarios.</p>
+  {% include papers.html ids="karami2025ijc" %}
+</section>
+
+<section class="theme" id="severe-weather">
+  <h2>Severe convective weather and lightning</h2>
+  <p>Before my PhD, at the Central University of Rajasthan, I used the WRF model to simulate thunderstorms, lightning, hailstorms and heavy rainfall over India and Bangladesh. This work covered sensitivity to grid resolution, time step and physics schemes; lightning diagnostics (lightning potential index and flash count); 3DVAR assimilation of upper-air observations; satellite-based lightning climatology; and real-time forecast workflows.</p>
+  {% include papers.html ids="kumar2024ajg,kumar2023mese,kumar2022jastp" more="and 7 co-authored papers, 2023–2025" more_url="/publications/#co-author" %}
+</section>
+
+<section class="theme" id="turbulence">
+  <h2>Stratospheric turbulence <span class="h-note">from November 2026</span></h2>
+  <p>At MISU, Stockholm University, I will work on stratospheric turbulence: how large-scale processes control when and where it occurs, and how it is represented in global models.</p>
+</section>

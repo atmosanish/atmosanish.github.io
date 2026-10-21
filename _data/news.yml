@@ -1,0 +1,22 @@
+# News, newest first.
+#
+# While this list is empty, the News section is switched off everywhere:
+# no "News" item in the top menu, no news block on the home page, and the
+# /news/ page is left out of search engines. Add the first item and all
+# three appear automatically.
+#
+# To add an item: copy the template below to the end of this file, remove the
+# leading "# " from each line, and delete the "[]" line. New items go at the
+# top of the list. The home page shows the three newest.
+#
+#   date   free text, as it should appear: "March 2027" or "12 March 2027"
+#   title  one line
+#   text   one or two sentences; links work like this: [label](https://...)
+#
+# - date: "March 2027"
+#   title: "Paper in Weather and Climate Dynamics"
+#   text: >-
+#     One or two sentences about it.
+#     [doi:10.xxxx/xxxxx](https://doi.org/10.xxxx/xxxxx)
+
+[]

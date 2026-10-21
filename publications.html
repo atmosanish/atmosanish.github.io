@@ -1,0 +1,32 @@
+---
+title: Publications
+permalink: /publications/
+description: Publications by Anish Kumar on the Arctic stratospheric polar vortex, ozone, gravity waves, explainable machine learning and WRF modelling of severe weather.
+---
+{%- assign pubs = site.data.publications -%}
+{%- assign thesis = pubs | where: "group", "thesis" -%}
+{%- assign first = pubs | where: "group", "first" -%}
+{%- assign coauthor = pubs | where: "group", "coauthor" -%}
+{%- assign paper_count = first.size | plus: coauthor.size -%}
+<p class="intro">{{ paper_count }} peer-reviewed papers and a PhD thesis, newest first. Also on <a href="{{ site.author.scholar | escape }}">Google Scholar</a> and <a href="{{ site.author.orcid }}">ORCID</a>.</p>
+
+<h2 id="thesis">PhD thesis</h2>
+<ul class="pub-list">
+  {%- for p in thesis %}
+  {% include pub.html p=p %}
+  {%- endfor %}
+</ul>
+
+<h2 id="first-author">First author</h2>
+<ul class="pub-list">
+  {%- for p in first %}
+  {% include pub.html p=p %}
+  {%- endfor %}
+</ul>
+
+<h2 id="co-author">Co-author</h2>
+<ul class="pub-list">
+  {%- for p in coauthor %}
+  {% include pub.html p=p %}
+  {%- endfor %}
+</ul>

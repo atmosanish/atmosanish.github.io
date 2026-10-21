@@ -1,0 +1,66 @@
+---
+title: CV
+permalink: /cv/
+description: Curriculum vitae of Anish Kumar — positions, education, skills.
+---
+<p class="intro"><a class="button" href="{{ site.cv_pdf | relative_url }}">Download CV (PDF)</a></p>
+
+<h2 id="positions">Positions</h2>
+<ul class="cv-list">
+  <li>
+    <p class="cv-when">From Nov 2026</p>
+    <div class="cv-what">
+      <p><strong>Postdoctoral Fellow</strong>, Stratospheric Dynamics and Turbulence</p>
+      <p class="meta">Department of Meteorology (MISU), Stockholm University, Sweden</p>
+    </div>
+  </li>
+  <li>
+    <p class="cv-when">Jul 2023 – May 2026</p>
+    <div class="cv-what">
+      <p><strong>Doctoral Researcher</strong></p>
+      <p class="meta">Institute for Meteorology, Leipzig University, Germany</p>
+    </div>
+  </li>
+  <li>
+    <p class="cv-when">Sep 2021 – Jun 2023</p>
+    <div class="cv-what">
+      <p><strong>Project Associate I</strong></p>
+      <p class="meta">Central University of Rajasthan, India</p>
+    </div>
+  </li>
+</ul>
+
+<h2 id="education">Education</h2>
+<ul class="cv-list">
+  <li>
+    <p class="cv-when">Jul 2023 – Apr 2026</p>
+    <div class="cv-what">
+      <p><strong>PhD in Meteorology</strong>, magna cum laude</p>
+      <p class="meta">Institute for Meteorology, Leipzig University, Germany. Defended 23 April 2026.</p>
+      <p class="meta">Thesis: <a href="https://nbn-resolving.org/urn:nbn:de:bsz:15-qucosa2-1042663"><em>Advances in Understanding of Exceptionally Strong Arctic Stratospheric Polar Vortex Dynamics and Associated Ozone Loss</em></a></p>
+    </div>
+  </li>
+  <li>
+    <p class="cv-when">Jul 2019 – Jul 2021</p>
+    <div class="cv-what">
+      <p><strong>MSc in Atmospheric Science</strong></p>
+      <p class="meta">Department of Atmospheric Science, Central University of Rajasthan, India</p>
+    </div>
+  </li>
+</ul>
+
+<h2 id="skills">Skills</h2>
+<dl class="skills">
+  <div><dt>Programming</dt><dd>Python (NumPy, xarray, pandas, Cartopy, matplotlib, scikit-learn), Fortran, shell scripting</dd></div>
+  <div><dt>Modelling</dt><dd>ICON, WRF, WRFDA/3DVAR, ensemble design, sensitivity studies, stratospheric vortex diagnostics</dd></div>
+  <div><dt>Machine learning</dt><dd>Explainable machine learning (SHAP), ensemble prediction, regression models</dd></div>
+  <div><dt>Data</dt><dd>ERA5 reanalysis, CMIP model output</dd></div>
+  <div><dt>HPC</dt><dd>Slurm, MPI, DKRZ Levante</dd></div>
+</dl>
+
+<p>Publications, talks and teaching are listed on their own pages: <a href="{{ '/publications/' | relative_url }}">Publications</a>, <a href="{{ '/talks/' | relative_url }}">Talks</a>, <a href="{{ '/teaching/' | relative_url }}">Teaching</a>.</p>
+
+{%- if site.reviewer_for and site.reviewer_for.size > 0 %}
+<h2 id="service">Service</h2>
+<p>Reviewer for {{ site.reviewer_for | array_to_sentence_string }}.</p>
+{%- endif %}

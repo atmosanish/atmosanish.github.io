@@ -1,0 +1,22 @@
+# Datasets and code. While this list is empty, the "Data & Code" page is
+# hidden from the navigation. Add the first entry and it appears automatically.
+#
+# Keep large files OUT of this repository: deposit data on Zenodo (free DOI)
+# and code on GitHub, then link them here.
+#
+# Template: copy it below, remove the leading "# " from each line,
+# and delete the final "[]" line.
+#
+# - title: "Arctic stratospheric polar vortex metrics from ERA5, 1979–2023"
+#   kind: dataset            # dataset | code
+#   description: >-
+#     One or two sentences: what it contains and what it is for.
+#   variables: "vortex area, EPV gradient, centre latitude/longitude"
+#   period: "1979–2023"
+#   format: "NetCDF"
+#   size: "120 MB"
+#   licence: "CC BY 4.0"
+#   url: "https://doi.org/10.5281/zenodo.XXXXXXX"
+#   paper: kumar2025climdyn  # id from _data/publications.yml
+
+[]

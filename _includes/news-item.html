@@ -1,0 +1,10 @@
+{%- comment -%} Usage: {% include news-item.html n=item level=2 %} {%- endcomment -%}
+{%- assign n = include.n -%}
+{%- assign h = include.level | default: 2 -%}
+<li class="news-item">
+  <p class="news-date">{{ n.date }}</p>
+  <div class="news-body">
+    <h{{ h }} class="news-title">{{ n.title }}</h{{ h }}>
+    {{ n.text | markdownify }}
+  </div>
+</li>

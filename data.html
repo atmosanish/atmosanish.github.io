@@ -1,0 +1,29 @@
+---
+title: Data & Code
+permalink: /data/
+needs: datasets
+description: Datasets and code by Anish Kumar.
+---
+{%- assign items = site.data.datasets -%}
+{%- if items.size == 0 %}
+<p class="intro">No datasets are listed yet. Code is on <a href="{{ site.author.github }}">GitHub</a>.</p>
+{%- else %}
+<p class="intro">Datasets and code from my papers. Please cite the dataset DOI and the related paper when you use them. Code is on <a href="{{ site.author.github }}">GitHub</a>.</p>
+<ul class="data-list">
+  {%- for d in items %}
+  {%- assign related = site.data.publications | where: "id", d.paper | first %}
+  <li class="data-item">
+    <h2 class="data-title">{% if d.url %}<a href="{{ d.url }}">{{ d.title }}</a>{% else %}{{ d.title }}{% endif %}</h2>
+    {%- if d.description %}<p>{{ d.description }}</p>{% endif %}
+    <dl class="data-facts">
+      {%- if d.kind %}<div><dt>Type</dt><dd>{{ d.kind | capitalize }}</dd></div>{% endif %}
+      {%- if d.variables %}<div><dt>Variables</dt><dd>{{ d.variables }}</dd></div>{% endif %}
+      {%- if d.period %}<div><dt>Period</dt><dd>{{ d.period }}</dd></div>{% endif %}
+      {%- if d.format %}<div><dt>Format</dt><dd>{{ d.format }}{% if d.size %}, {{ d.size }}{% endif %}</dd></div>{% endif %}
+      {%- if d.licence %}<div><dt>Licence</dt><dd>{{ d.licence }}</dd></div>{% endif %}
+      {%- if related %}<div><dt>Paper</dt><dd><a href="{{ '/publications/' | relative_url }}#{{ related.id }}">{{ related.title }}</a> ({{ related.year }})</dd></div>{% endif %}
+    </dl>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif %}
